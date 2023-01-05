@@ -1,113 +1,354 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="8" time="494.138">
-    <testcase classname="signup popup feature" name="test popup apearnes" time="45.558">
-        <system-out><![CDATA[When click signup tab.......................................................passed
-And signin screen popup.....................................................passed
-When click without data.....................................................passed
-And accept the alert........................................................passed
-When enter data.............................................................passed
-And click signup button.....................................................passed
-When fail...................................................................passed
-And retype data.............................................................passed
-Then success................................................................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="8" time="398.332">
+    <testcase classname="sign up feature" name="test sign up feature functional" time="46.911">
+        <system-out><![CDATA[Given i open browser and navigate to demoblaze..............................passed
+And i click sign up tab.....................................................passed
+When check if form "signup" is appear.......................................passed
+Then i click "Sign up" button...............................................passed
+When check if alert message is same with "Please fill out Username and Password.".passed
+Then accept alert...........................................................passed
+When i enter "evan1240" in "sign-username" colum............................passed
+Then i click "Sign up" button...............................................passed
+When check if alert message is same with "Please fill out Username and Password.".passed
+Then accept alert...........................................................passed
+When i clear "sign-username" colum..........................................passed
+And i enter "1234567890" in "sign-password" colum...........................passed
+Then i click "Sign up" button...............................................passed
+When check if alert message is same with "Please fill out Username and Password.".passed
+Then accept alert...........................................................passed
+When i enter "evan1240" in "sign-username" colum............................passed
+Then i click "Sign up" button...............................................passed
+When check if alert message is same with "This user already exist.".........passed
+Then accept alert...........................................................passed
+When i clear "sign-username" colum..........................................passed
+And i enter "evan1246" in "sign-username" colum.............................passed
+Then i click "Sign up" button...............................................passed
+Then accept alert...........................................................passed
+Then close browser..........................................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="login feature" name="login testing feature" time="30.287">
-        <system-out><![CDATA[When click login tab........................................................passed
-And click login without cridential..........................................passed
-When enter wrong cridential.................................................passed
-And fail login..............................................................passed
-When not enter password.....................................................passed
-And fail login1.............................................................passed
-When enter right cridential.................................................passed
-Then success login..........................................................passed
+    <testcase classname="login feature" name="to test login feature is working" time="32.746">
+        <system-out><![CDATA[Given i open browser and navigate to demoblaze..............................passed
+When i click "Log in" tab...................................................passed
+Then check if form "login" is appear........................................passed
+And i click "Log in" button.................................................passed
+When check if alert message is same with "Please fill out Username and Password.".passed
+Then accept alert...........................................................passed
+When i click close "login" button...........................................passed
+And check if form "login" is gone...........................................passed
+Then i click "Log in" tab...................................................passed
+And check if form "login" is appear.........................................passed
+When i enter "evan1240" in "loginusername" colum............................passed
+And i click "Log in" button.................................................passed
+When check if alert message is same with "Please fill out Username and Password.".passed
+Then accept alert...........................................................passed
+When i click x "login" button...............................................passed
+And check if form "login" is gone...........................................passed
+Then i click "Log in" tab...................................................passed
+And check if form "login" is appear.........................................passed
+When i enter "12345" in "loginpassword" colum...............................passed
+And i click "Log in" button.................................................passed
+When check if alert message is same with "Wrong password."..................passed
+Then accept alert...........................................................passed
+When i clear "loginusername" colum..........................................passed
+Then i click "Log in" button................................................passed
+And check if alert message is same with "Please fill out Username and Password.".passed
+Then accept alert...........................................................passed
+When i clear "loginpassword" colum..........................................passed
+And i enter "evan12" in "loginusername" colum...............................passed
+Then i enter "1234567890" in "loginpassword" colum..........................passed
+And i click "Log in" button.................................................passed
+When check if alert message is same with "User does not exist.".............passed
+Then accept alert...........................................................passed
+When i clear "loginusername" colum..........................................passed
+And i enter "evan1240" in "loginusername" colum.............................passed
+Then i click "Log in" button................................................passed
+When check if "nameofuser" is visible.......................................passed
+Then close browser..........................................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="logout testing" name="logout fucyionality testing" time="24.311">
-        <system-out><![CDATA[When user login.............................................................passed
-And logout..................................................................passed
-Then successfuly login......................................................passed
+    <testcase classname="logout feature" name="user login and logout" time="22.539">
+        <system-out><![CDATA[Given i open browser and navigate to demoblaze..............................passed
+And i click "Log in" tab....................................................passed
+When i enter "evan1240" in "loginusername" colum............................passed
+And i enter "1234567890" in "loginpassword" colum...........................passed
+Then i click "Log in" button................................................passed
+When check if "nameofuser" is visible.......................................passed
+Then i click "Log out" tab..................................................passed
+When check if "signin2" is visible..........................................passed
+Then close browser..........................................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="about us" name="test about us" time="29.11">
-        <system-out><![CDATA[When user login.............................................................passed
-And click about us tab......................................................passed
-When check close and x btn..................................................passed
-And verify video............................................................passed
-Then successfuly login......................................................passed
+    <testcase classname="about us feature" name="this testing to make sure that about us video is avalable" time="28.532">
+        <system-out><![CDATA[Given i open browser and navigate to demoblaze..............................passed
+And i click "About us" tab..................................................passed
+Then check if video is avalaible............................................passed
+When i click close "aboutUs" button.........................................passed
+And check if form "aboutUs" is gone.........................................passed
+And i click "About us" tab..................................................passed
+Then check if video is avalaible............................................passed
+When i click x "aboutUs" button.............................................passed
+And check if form "aboutUs" is gone.........................................passed
+And i click "Log in" tab....................................................passed
+When i enter "evan1240" in "loginusername" colum............................passed
+And i enter "1234567890" in "loginpassword" colum...........................passed
+Then i click "Log in" button................................................passed
+When check if "nameofuser" is visible.......................................passed
+Then i click "About us" tab.................................................passed
+And check if video is avalaible.............................................passed
+Then close browser..........................................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="contact us" name="testing contact us function" time="50.283">
-        <system-out><![CDATA[Given user login............................................................passed
-And click contactus.........................................................passed
-When enter contact..........................................................passed
-And not enter contact.......................................................passed
-Then successfuly login......................................................passed
+    <testcase classname="contact feature" name="testing contact feature is working" time="57.292">
+        <system-out><![CDATA[Given i open browser and navigate to demoblaze..............................passed
+And i click "Log in" tab....................................................passed
+Then check if form "login" is appear........................................passed
+When i enter "evan1240" in "loginusername" colum............................passed
+And i enter "1234567890" in "loginpassword" colum...........................passed
+Then i click "Log in" button................................................passed
+And check if "nameofuser" is visible........................................passed
+Then i click "Contact" tab..................................................passed
+And check if form "contact" is appear.......................................passed
+When i click "Send message" button..........................................passed
+And check if alert message is same with "Thanks for the message!!"..........passed
+Then accept alert...........................................................passed
+When i click "Contact" tab..................................................passed
+And check if form "contact" is appear.......................................passed
+And i enter "user@gmail.com" in "recipient-email" colum.....................passed
+And i enter "username" in "recipient-name" colum............................passed
+And i enter "user message" in "message-text" colum..........................passed
+Then i click "Send message" button..........................................passed
+When check if alert message is same with "Thanks for the message!!".........passed
+Then accept alert...........................................................passed
+When i click "Contact" tab..................................................passed
+Then check if form "contact" is appear......................................passed
+And i enter "user@gmail.com" in "recipient-email" colum.....................passed
+Then i click "Send message" button..........................................passed
+When check if alert message is same with "Thanks for the message!!".........passed
+Then accept alert...........................................................passed
+When i click "Contact" tab..................................................passed
+Then check if form "contact" is appear......................................passed
+And i enter "username" in "recipient-name" colum............................passed
+Then i click "Send message" button..........................................passed
+When check if alert message is same with "Thanks for the message!!".........passed
+Then accept alert...........................................................passed
+When i click "Contact" tab..................................................passed
+Then check if form "contact" is appear......................................passed
+And i enter "user message" in "message-text" colum..........................passed
+Then i click "Send message" button..........................................passed
+When check if alert message is same with "Thanks for the message!!".........passed
+Then accept alert...........................................................passed
+When i click "Contact" tab..................................................passed
+And check if form "contact" is appear.......................................passed
+Then i click x "contact" button.............................................passed
+And check if form "contact" is gone.........................................passed
+When i click "Contact" tab..................................................passed
+Then check if form "contact" is appear......................................passed
+And i click close "contact" button..........................................passed
+Then close browser..........................................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="home feature" name="home page testing" time="48.196">
-        <system-out><![CDATA[When user login.............................................................passed
-And tab home................................................................passed
-When move phone category and check..........................................passed
-And move laptop category and check..........................................passed
-When move monitor category and check........................................passed
-And check next and previous button..........................................passed
-Then check button right and left............................................passed
+    <testcase classname="home feature" name="check if all element in home is visible" time="34.885">
+        <system-out><![CDATA[Given i open browser and navigate to demoblaze..............................passed
+And i click "Log in" tab....................................................passed
+Then check if form "login" is appear........................................passed
+When i enter "evan1240" in "loginusername" colum............................passed
+And i enter "1234567890" in "loginpassword" colum...........................passed
+Then i click "Log in" button................................................passed
+And check if "nameofuser" is visible........................................passed
+When i click "Home" tab.....................................................passed
+And i click "carousel-control-next-icon" class button.......................passed
+And i click "carousel-control-prev-icon" class button.......................passed
+Then check if elemen "head" is appear.......................................passed
+And check if elemen "phone" is appear.......................................passed
+And check if elemen "laptop" is appear......................................passed
+And check if elemen "monitor" is appear.....................................passed
+When i click elemen "phone".................................................passed
+Then check if item "Samsung galaxy s6" is appear............................passed
+And check if item "Nokia lumia 1520" is appear..............................passed
+And check if item "Nexus 6" is appear.......................................passed
+And check if item "Samsung galaxy s7" is appear.............................passed
+And check if item "Iphone 6 32gb" is appear.................................passed
+And check if item "Sony xperia z5" is appear................................passed
+And check if item "HTC One M9" is appear....................................passed
+When i click elemen "laptop"................................................passed
+Then check if item "Sony vaio i5" is appear.................................passed
+And check if item "Sony vaio i7" is appear..................................passed
+And check if item "MacBook air" is appear...................................passed
+And check if item "Dell i7 8gb" is appear...................................passed
+And check if item "2017 Dell 15.6 Inch" is appear...........................passed
+And check if item "MacBook Pro" is appear...................................passed
+When i click elemen "monitor"...............................................passed
+Then check if item "Apple monitor 24" is appear.............................passed
+And check if item "ASUS Full HD" is appear..................................passed
+When i click "Previous" button..............................................passed
+Then i click "Next" button..................................................passed
+Then close browser..........................................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="add to cart feature" name="add to cart functionality testing" time="201.761">
-        <system-out><![CDATA[When user login.............................................................passed
-And tab home................................................................passed
-When move phone category and check..........................................passed
-And add phones to cart......................................................passed
-When move laptop category and check.........................................passed
-And add laptops to cart.....................................................passed
-When move monitor category and check........................................passed
-And add monitors to cart....................................................passed
-Then check if all items in cart.............................................passed
+    <testcase classname="add to cart feature" name="add item to cart one by one" time="120.809">
+        <system-out><![CDATA[Given i open browser and navigate to demoblaze..............................passed
+And i click "Log in" tab....................................................passed
+When i enter "evan1240" in "loginusername" colum............................passed
+And i enter "1234567890" in "loginpassword" colum...........................passed
+Then i click "Log in" button................................................passed
+When check if "nameofuser" is visible.......................................passed
+And check if elemen "phone" is appear.......................................passed
+When i click elemen "phone".................................................passed
+Then check if item "Samsung galaxy s6" is appear............................passed
+And check if item "Nokia lumia 1520" is appear..............................passed
+And check if item "Nexus 6" is appear.......................................passed
+And check if item "Samsung galaxy s7" is appear.............................passed
+And check if item "Iphone 6 32gb" is appear.................................passed
+And check if item "Sony xperia z5" is appear................................passed
+And check if item "HTC One M9" is appear....................................passed
+Then i click item "Samsung galaxy s6".......................................passed
+When item "Samsung galaxy s6" is opened.....................................passed
+Then i click item "Add to cart".............................................passed
+When check if alert message is same with "Product added."...................passed
+And accept alert............................................................passed
+Then navigate back "2" times................................................passed
+And i click item "Nokia lumia 1520".........................................passed
+When item "Nokia lumia 1520" is opened......................................passed
+Then i click item "Add to cart".............................................passed
+When check if alert message is same with "Product added."...................passed
+And accept alert............................................................passed
+Then navigate back "2" times................................................passed
+And i click item "Nexus 6"..................................................passed
+When item "Nexus 6" is opened...............................................passed
+Then i click item "Add to cart".............................................passed
+When check if alert message is same with "Product added."...................passed
+And accept alert............................................................passed
+Then navigate back "2" times................................................passed
+And i click item "Samsung galaxy s7"........................................passed
+When item "Samsung galaxy s7" is opened.....................................passed
+Then i click item "Add to cart".............................................passed
+When check if alert message is same with "Product added."...................passed
+And accept alert............................................................passed
+Then navigate back "2" times................................................passed
+And i click item "Iphone 6 32gb"............................................passed
+When item "Iphone 6 32gb" is opened.........................................passed
+Then i click item "Add to cart".............................................passed
+When check if alert message is same with "Product added."...................passed
+And accept alert............................................................passed
+Then navigate back "2" times................................................passed
+And i click item "Sony xperia z5"...........................................passed
+When item "Sony xperia z5" is opened........................................passed
+Then i click item "Add to cart".............................................passed
+When check if alert message is same with "Product added."...................passed
+And accept alert............................................................passed
+Then navigate back "2" times................................................passed
+And i click item "HTC One M9"...............................................passed
+When item "HTC One M9" is opened............................................passed
+Then i click item "Add to cart".............................................passed
+When check if alert message is same with "Product added."...................passed
+And accept alert............................................................passed
+Then navigate back "2" times................................................passed
+And check if elemen "laptop" is appear......................................passed
+When i click elemen "laptop"................................................passed
+Then check if item "Sony vaio i5" is appear.................................passed
+And check if item "Sony vaio i7" is appear..................................passed
+And check if item "MacBook air" is appear...................................passed
+And check if item "Dell i7 8gb" is appear...................................passed
+And check if item "2017 Dell 15.6 Inch" is appear...........................passed
+And check if item "MacBook Pro" is appear...................................passed
+Then i click item "Sony vaio i5"............................................passed
+When item "Sony vaio i5" is opened..........................................passed
+Then i click item "Add to cart".............................................passed
+When check if alert message is same with "Product added."...................passed
+And accept alert............................................................passed
+Then navigate back "2" times................................................passed
+And i click item "Sony vaio i7".............................................passed
+When item "Sony vaio i7" is opened..........................................passed
+Then i click item "Add to cart".............................................passed
+When check if alert message is same with "Product added."...................passed
+And accept alert............................................................passed
+Then navigate back "2" times................................................passed
+And i click item "MacBook air"..............................................passed
+When item "MacBook air" is opened...........................................passed
+Then i click item "Add to cart".............................................passed
+When check if alert message is same with "Product added."...................passed
+And accept alert............................................................passed
+Then navigate back "2" times................................................passed
+And i click item "Dell i7 8gb"..............................................passed
+When item "Dell i7 8gb" is opened...........................................passed
+Then i click item "Add to cart".............................................passed
+When check if alert message is same with "Product added."...................passed
+And accept alert............................................................passed
+Then navigate back "2" times................................................passed
+And i click item "2017 Dell 15.6 Inch"......................................passed
+When item "2017 Dell 15.6 Inch" is opened...................................passed
+Then i click item "Add to cart".............................................passed
+When check if alert message is same with "Product added."...................passed
+And accept alert............................................................passed
+Then navigate back "2" times................................................passed
+And i click item "MacBook Pro"..............................................passed
+When item "MacBook Pro" is opened...........................................passed
+Then i click item "Add to cart".............................................passed
+When check if alert message is same with "Product added."...................passed
+And accept alert............................................................passed
+Then navigate back "2" times................................................passed
+And check if elemen "monitor" is appear.....................................passed
+When i click elemen "monitor"...............................................passed
+Then check if item "Apple monitor 24" is appear.............................passed
+And check if item "ASUS Full HD" is appear..................................passed
+Then i click item "Apple monitor 24"........................................passed
+When item "Apple monitor 24" is opened......................................passed
+Then i click item "Add to cart".............................................passed
+When check if alert message is same with "Product added."...................passed
+And accept alert............................................................passed
+Then navigate back "2" times................................................passed
+And i click item "ASUS Full HD".............................................passed
+When item "ASUS Full HD" is opened..........................................passed
+Then i click item "Add to cart".............................................passed
+When check if alert message is same with "Product added."...................passed
+And accept alert............................................................passed
+Then navigate back "2" times................................................passed
+When i click "Cart" tab.....................................................passed
+And check if fist table is appear...........................................passed
+And check if cart is not empty..............................................passed
+Then close browser..........................................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="checkout feature" name="checkout functionality testing" time="59.975">
-        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//td)[60]&quot;}&#10;  (Session info: chrome=107.0.5304.110)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-56-generic', java.version: '17.0.5'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [cbf9a7052784341aa9175f9a4049ae27, findElement {using=xpath, value=(//td)[60]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.110, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: /tmp/.com.google.Chrome.OUdnIW}, goog:chromeOptions: {debuggerAddress: localhost:35219}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:35219/devtoo..., se:cdpVersion: 107.0.5304.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: cbf9a7052784341aa9175f9a4049ae27" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When user login.............................................................passed
-When user click cart........................................................passed
-And check cart items........................................................passed
-When user click delete button...............................................passed
-And check item deleted is gone..............................................failed
-When user click place order button..........................................skipped
-And user not enter order data...............................................skipped
-When user order with order data.............................................skipped
-And succesfull order........................................................skipped
-Then logout.................................................................skipped
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//td)[60]"}
-  (Session info: chrome=107.0.5304.110)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.7.2', revision: '4d4020c3b7'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-56-generic', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cbf9a7052784341aa9175f9a4049ae27, findElement {using=xpath, value=(//td)[60]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.110, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: /tmp/.com.google.Chrome.OUdnIW}, goog:chromeOptions: {debuggerAddress: localhost:35219}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:35219/devtoo..., se:cdpVersion: 107.0.5304.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: cbf9a7052784341aa9175f9a4049ae27
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
-	at pagesLocator.cart_page.check_item_table(cart_page.java:61)
-	at StepDefinitions.T08_checkout.check_item_deleted_is_gone(T08_checkout.java:55)
-	at ✽.check item deleted is gone(file:///home/evan/Documents/MavenProjects/testing/src/test/resource/Features/08_checkout.feature:8)
-]]></failure>
+    <testcase classname="check out feature" name="test if check out feature is working" time="47.776">
+        <system-out><![CDATA[Given i open browser and navigate to demoblaze..............................passed
+And i click "Log in" tab....................................................passed
+When i enter "evan1240" in "loginusername" colum............................passed
+And i enter "1234567890" in "loginpassword" colum...........................passed
+Then i click "Log in" button................................................passed
+When check if "nameofuser" is visible.......................................passed
+And i click "Cart" tab......................................................passed
+Then check if fist table is appear..........................................passed
+And get prize "before" delete...............................................passed
+When i click "delete" button................................................passed
+Then check if fist table is appear..........................................passed
+And get prize "after" delete................................................passed
+When check if prize after less than before..................................passed
+Then i click "Place Order" button...........................................passed
+When check if form "placeOrder" is appear...................................passed
+And i click "Purchase" button...............................................passed
+And check if alert message is same with "Please fill out Name and Creditcard.".passed
+Then accept alert...........................................................passed
+When i enter "username" in "name" colum.....................................passed
+And i click "Purchase" button...............................................passed
+And check if alert message is same with "Please fill out Name and Creditcard.".passed
+Then accept alert...........................................................passed
+When i enter "indonesia" in "country" colum.................................passed
+And i click "Purchase" button...............................................passed
+And check if alert message is same with "Please fill out Name and Creditcard.".passed
+Then accept alert...........................................................passed
+When i enter "salatiga" in "city" colum.....................................passed
+And i click "Purchase" button...............................................passed
+And check if alert message is same with "Please fill out Name and Creditcard.".passed
+Then accept alert...........................................................passed
+When i enter "23424234624" in "card" colum..................................passed
+And i enter "03" in "month" colum...........................................passed
+And i enter "99" in "year" colum............................................passed
+Then i click "Purchase" button..............................................passed
+When item "Thank you for your purchase!" is opened..........................passed
+And i click "OK" button.....................................................passed
+And check if "nameofuser" is visible........................................passed
+Then close browser..........................................................passed
+]]></system-out>
     </testcase>
 </testsuite>
